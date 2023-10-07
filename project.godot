@@ -12,14 +12,14 @@ config_version=5
 
 config/name="Titan"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-boot_splash/image="res://Assests/Colorway=2-Color White.svg"
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://Assests/Colorway=2-Color White alt.png"
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [input]
@@ -44,6 +44,10 @@ move_right={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
 ]
+}
+null={
+"deadzone": 0.5,
+"events": []
 }
 
 [rendering]

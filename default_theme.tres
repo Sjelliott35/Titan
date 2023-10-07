@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cqmfekjj0e4bo"]
+
+[ext_resource type="FontFile" uid="uid://bj3ces4dccsh8" path="res://Assests/contourg.ttf" id="1_13624"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.396078, 0.396078, 0.396078, 1)
+Button/colors/font_outline_color = Color(1, 0, 0.462745, 1)
+Button/constants/outline_size = 3
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_13624")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_shadow_color = Color(1, 0, 1, 1)
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/fonts/normal_font = ExtResource("1_13624")
