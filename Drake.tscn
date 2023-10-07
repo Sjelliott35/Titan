@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3x3ajnp4cvlo"]
+
+[ext_resource type="Texture2D" uid="uid://ousi0no063oa" path="res://Assests/Drake.png" id="1_giox3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uy6rm"]
+radius = 22.0
+height = 108.0
+
+[node name="NPC" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("1_giox3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_uy6rm")

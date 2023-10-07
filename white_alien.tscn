@@ -25,7 +25,7 @@ height = 44.0
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rpk2c")
-frame_progress = 0.305603
+frame_progress = 0.765352
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
