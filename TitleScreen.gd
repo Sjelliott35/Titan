@@ -16,4 +16,4 @@ func _on_exit_pressed():
 
 
 func _on_new_game_pressed():
-	get_tree().change_scene_to_file("res://level.tscn")
+	get_tree().change_scene_to_file("res://exposition.tscn")

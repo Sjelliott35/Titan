@@ -1,22 +1,31 @@
 extends CharacterBody2D
 
 @export var speed = 400
-var look = "left"
+@export var jump_speed = -400
+var look = "right"
+var falling = false
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	get_input()
+	velocity.y += gravity * delta
 	move_and_slide()
 
 func get_input():
 	walking_check()
-	var input_direction = Input.get_vector("move_left", "move_right", "null", "null")
-	velocity = input_direction * speed
+	var input_direction = Input.get_axis("move_left", "move_right")
+	if Input.is_action_pressed("jump") and is_on_floor():
+		velocity.y = jump_speed
+		falling = false
+	if Input.is_action_just_released("jump") and not is_on_floor() and not falling:
+		velocity.y = 0
+		falling = true
+	velocity.x = input_direction * speed
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://TitleScreen.tscn")
 

@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwsw2jss5iuii"]
+
+[ext_resource type="Script" path="res://Scripts/exposition.gd" id="1_7gfd3"]
+[ext_resource type="Texture2D" uid="uid://dwbp5j5ou65kk" path="res://Assests/Title.png" id="1_u4gnt"]
+[ext_resource type="Texture2D" uid="uid://bablcilv648w" path="res://Assests/Saturn.png" id="2_xr4fi"]
+[ext_resource type="Theme" uid="uid://cqmfekjj0e4bo" path="res://default_theme.tres" id="3_syd2w"]
+[ext_resource type="FontFile" uid="uid://d1kjrlyqtojal" path="res://Assests/Courier.ttf" id="4_gya0f"]
+
+[sub_resource type="Animation" id="Animation_fen2w"]
+resource_name = "typing"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.5, 3.5, 4, 6, 6.5, 8, 8.5, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.281, 0.281, 0.595, 0.595, 0.765, 0.765, 0.91, 0.91, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_mqupv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ogvl"]
+_data = {
+"RESET": SubResource("Animation_mqupv"),
+"typing": SubResource("Animation_fen2w")
+}
+
+[node name="Exposition" type="Node2D"]
+script = ExtResource("1_7gfd3")
+
+[node name="TitleBG" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(7.11111, 6)
+texture = ExtResource("1_u4gnt")
+metadata/_edit_lock_ = true
+
+[node name="Saturn" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.25098)
+position = Vector2(274, 275)
+scale = Vector2(6.30645, 6.30645)
+texture = ExtResource("2_xr4fi")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.089
+anchor_right = 0.95
+anchor_bottom = 0.889
+offset_top = -0.0800018
+offset_bottom = -0.0800171
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_syd2w")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/normal_font = ExtResource("4_gya0f")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]After 1000 years humanity has forced Saturn's moon, Titan, into warming to become a habitable environment.
+
+A city of scientists on the planet are researching if life could have developed since the warming of the icy moon.
+
+Your job is to explore the lands on Titan and find new species.
+
+Move with the arrow keys or WASD. Use SPACE to jump.
+
+Press ENTER to begin your journey.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8ogvl")
+}

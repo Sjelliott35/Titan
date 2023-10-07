@@ -13,7 +13,6 @@ position = Vector2(640, 360)
 scale = Vector2(7.11111, 6)
 texture = ExtResource("1_nf4wp")
 metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
 
 [node name="Saturn" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.25098)
@@ -21,7 +20,6 @@ position = Vector2(274, 275)
 scale = Vector2(6.30645, 6.30645)
 texture = ExtResource("2_vly5k")
 metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_top = 522.0
@@ -46,13 +44,13 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_rp022")
-text = "NEW GAME"
+text = "START GAME"
 
-[node name="Continue" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Settings" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_rp022")
-text = "CONTINUE"
+text = "SETTINGS"
 
 [node name="ExitButton" type="Button" parent="."]
 offset_left = 1127.0
