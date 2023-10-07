@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://yx32gwahc7mk"]
+
+[ext_resource type="Texture2D" uid="uid://dwbp5j5ou65kk" path="res://Assests/Title.png" id="1_nf4wp"]
+[ext_resource type="Script" path="res://TitleScreen.gd" id="1_xdrc7"]
+[ext_resource type="Texture2D" uid="uid://bablcilv648w" path="res://Assests/Saturn.png" id="2_vly5k"]
+[ext_resource type="Theme" uid="uid://cqmfekjj0e4bo" path="res://default_theme.tres" id="3_rp022"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_xdrc7")
+
+[node name="TitleBG" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(7.11111, 6)
+texture = ExtResource("1_nf4wp")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Saturn" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.25098)
+position = Vector2(274, 275)
+scale = Vector2(6.30645, 6.30645)
+texture = ExtResource("2_vly5k")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_top = 522.0
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GameTitle" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_rp022")
+theme_override_font_sizes/normal_font_size = 55
+bbcode_enabled = true
+text = "[center]OUTPOST TITAN - THE FRIGID FRONTIER"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NewGame" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_rp022")
+text = "NEW GAME"
+
+[node name="Continue" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_rp022")
+text = "CONTINUE"
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 1127.0
+offset_top = 12.0
+offset_right = 1269.0
+offset_bottom = 69.0
+theme = ExtResource("3_rp022")
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_pressed"]
