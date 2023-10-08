@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://yx32gwahc7mk"]
+[gd_scene load_steps=6 format=3 uid="uid://yx32gwahc7mk"]
 
 [ext_resource type="Texture2D" uid="uid://dwbp5j5ou65kk" path="res://Assests/Title.png" id="1_nf4wp"]
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_xdrc7"]
 [ext_resource type="Texture2D" uid="uid://bablcilv648w" path="res://Assests/Saturn.png" id="2_vly5k"]
 [ext_resource type="Theme" uid="uid://cqmfekjj0e4bo" path="res://default_theme.tres" id="3_rp022"]
+[ext_resource type="AudioStream" uid="uid://cmwh7ky7letw1" path="res://Assests/sound/Ambient Exploration Main.ogg" id="5_pw08b"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_xdrc7")
@@ -51,6 +52,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_rp022")
 text = "EXIT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pw08b")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_exit_pressed"]

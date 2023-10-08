@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ds3db2lbep1ht"]
+[gd_scene load_steps=9 format=3 uid="uid://ds3db2lbep1ht"]
 
 [ext_resource type="Script" path="res://Scripts/ice_cave_level.gd" id="1_ev6va"]
 [ext_resource type="PackedScene" uid="uid://cd6r5xw5ymjc1" path="res://Player.tscn" id="3_i5qxl"]
 [ext_resource type="Texture2D" uid="uid://cgnvejijq20nb" path="res://Assests/CAVVVEEEEEE.png" id="4_2nsbl"]
 [ext_resource type="Texture2D" uid="uid://b6k2y5fygc6lt" path="res://Assests/IceTiles.png" id="4_owy8w"]
+[ext_resource type="AudioStream" uid="uid://bk20e3eqy0fcb" path="res://Assests/sound/Ambient Vol2 Wonder Exploration Main.ogg" id="6_cax5w"]
 [ext_resource type="PackedScene" uid="uid://bgb7nj0wf3jel" path="res://blue_alien.tscn" id="11_1u62n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_034yj"]
@@ -79,5 +80,9 @@ layer_0/tile_data = PackedInt32Array(-6684673, 65536, 0, -6619137, 65536, 0, -65
 
 [node name="Alien" parent="." instance=ExtResource("11_1u62n")]
 position = Vector2(1744, 8)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_cax5w")
+autoplay = true
 
 [connection signal="body_entered" from="Alien" to="." method="_on_alien_body_entered"]

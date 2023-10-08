@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://4gmjudtk5evg"]
+[gd_scene load_steps=14 format=3 uid="uid://4gmjudtk5evg"]
 
 [ext_resource type="Script" path="res://Scripts/tundra_level.gd" id="1_jhr20"]
 [ext_resource type="Texture2D" uid="uid://db52wk2gbe4pt" path="res://Assests/Tundraback.png" id="2_eyp64"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://crgvc0tke1pi" path="res://penguin_alien.tscn" id="7_f1dvt"]
 [ext_resource type="Texture2D" uid="uid://bay5xenvmm0l8" path="res://Assests/Exavier.png" id="7_mopp2"]
 [ext_resource type="PackedScene" uid="uid://ce8qqa6qc05gq" path="res://cyclone.tscn" id="8_uem0r"]
+[ext_resource type="AudioStream" uid="uid://csjfp6mcgql5q" path="res://Assests/sound/Ambient Vol2 Glorious Main.ogg" id="11_8yshd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_034yj"]
 texture = ExtResource("4_tomrc")
@@ -124,6 +125,10 @@ position = Vector2(5192, -1936)
 
 [node name="Cyclone3" parent="." instance=ExtResource("8_uem0r")]
 position = Vector2(6800, -4592)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_8yshd")
+autoplay = true
 
 [connection signal="body_entered" from="Alien" to="." method="_on_alien_body_entered"]
 [connection signal="boost" from="Cyclone" to="Player" method="_on_cyclone_boost"]

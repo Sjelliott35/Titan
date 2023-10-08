@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://csl5detxsut1n"
+path="res://.godot/imported/Spaceship Engine.ogg-9bcc42029e1e0c9d4d0ed0cd315e2f34.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assests/sound/Spaceship Engine.ogg"
+dest_files=["res://.godot/imported/Spaceship Engine.ogg-9bcc42029e1e0c9d4d0ed0cd315e2f34.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

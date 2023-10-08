@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmwh7ky7letw1"
+path="res://.godot/imported/Ambient Exploration Main.ogg-6bd2c66a3dc6bfabbe1c86d6fbf9dd9a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assests/sound/Ambient Exploration Main.ogg"
+dest_files=["res://.godot/imported/Ambient Exploration Main.ogg-6bd2c66a3dc6bfabbe1c86d6fbf9dd9a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
