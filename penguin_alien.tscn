@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckcwsvvnc0582"]
+[gd_scene load_steps=6 format=3 uid="uid://crgvc0tke1pi"]
 
+[ext_resource type="Script" path="res://Scripts/alien.gd" id="1_bt7q0"]
 [ext_resource type="Texture2D" uid="uid://w68r224qjmhr" path="res://Assests/penguinalien1.png" id="1_x41py"]
 [ext_resource type="Texture2D" uid="uid://tnfqj35rdyon" path="res://Assests/penguinalien2.png" id="2_ahmuh"]
 
@@ -18,15 +19,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_15chs"]
-radius = 8.0
-height = 22.0
+radius = 17.5
+height = 61.6
 
 [node name="Area2D" type="Area2D"]
+scale = Vector2(10, 10)
+script = ExtResource("1_bt7q0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r1i2p")
 frame_progress = 0.312738
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 15)
+position = Vector2(0, 8.2)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_15chs")

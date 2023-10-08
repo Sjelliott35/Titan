@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgb7nj0wf3jel"]
+
+[ext_resource type="Texture2D" uid="uid://pr6r5dfoegmn" path="res://Assests/Bluealien1.png" id="1_g5ynt"]
+[ext_resource type="Texture2D" uid="uid://dimtvcl8utbf7" path="res://Assests/Bluealien2.png" id="2_vn46m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6h3e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g5ynt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vn46m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4t3o"]
+size = Vector2(256, 88)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_w6h3e")
+frame_progress = 0.573156
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-24, -44)
+shape = SubResource("RectangleShape2D_d4t3o")

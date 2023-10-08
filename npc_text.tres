@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c02j7ocec2408"]
+
+[ext_resource type="FontFile" uid="uid://d1kjrlyqtojal" path="res://Assests/Courier.ttf" id="1_jo3dp"]
+
+[resource]
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/normal_font_size = 45
+RichTextLabel/fonts/normal_font = ExtResource("1_jo3dp")
