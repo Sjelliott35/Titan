@@ -85,7 +85,7 @@ flip_h = true
 [node name="NPC-text" parent="Jeff" index="2"]
 offset_top = -472.0
 text = "[center]Did you know our solar system holds around 290 moons?
-Despite this, Titan is the only planet with a strong nitrogen atmosphere similar to Earth's."
+Despite this, Titan is the only moon with a strong nitrogen atmosphere similar to Earth's."
 
 [node name="John" parent="." instance=ExtResource("4_dxepn")]
 position = Vector2(928, 592)
