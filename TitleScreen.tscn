@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwbp5j5ou65kk" path="res://Assests/Title.png" id="1_nf4wp"]
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_xdrc7"]
 [ext_resource type="Texture2D" uid="uid://bablcilv648w" path="res://Assests/Saturn.png" id="2_vly5k"]
-[ext_resource type="Theme" uid="uid://cqmfekjj0e4bo" path="res://default_theme.tres" id="3_rp022"]
+[ext_resource type="Theme" path="res://default_theme.tres" id="3_rp022"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_xdrc7")
