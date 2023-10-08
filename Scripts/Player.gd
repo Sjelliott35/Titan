@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var jump_speed = -400
 var look = "right"
 var falling = false
+var boosted = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Called when the node enters the scene tree for the first time.
@@ -21,8 +22,11 @@ func get_input():
 	var input_direction = Input.get_axis("move_left", "move_right")
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_speed
-		falling = false
-	if Input.is_action_just_released("jump") and not is_on_floor() and not falling:
+		if not boosted:
+			falling = false
+		else:
+			boosted = false
+	if Input.is_action_just_released("jump") and not is_on_floor() and not falling and not boosted:
 		velocity.y = 0
 		falling = true
 	velocity.x = input_direction * speed
@@ -40,5 +44,9 @@ func walking_check():
 			$AnimatedSprite2D.set_flip_h(false)
 			look = "right"
 		$AnimatedSprite2D.play("walking")
-	if Input.is_action_just_released("move_left") or Input.is_action_just_released("move_right"):
+	if Input.is_action_pressed("jump") or Input.is_action_just_released("move_left") or Input.is_action_just_released("move_right"):
 		$AnimatedSprite2D.play("default")
+
+func _on_cyclone_boost():
+	velocity.y = jump_speed * 2
+	boosted = true

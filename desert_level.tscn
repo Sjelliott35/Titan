@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://djt055n320q31"]
+[gd_scene load_steps=10 format=3 uid="uid://djt055n320q31"]
 
 [ext_resource type="PackedScene" uid="uid://cd6r5xw5ymjc1" path="res://Player.tscn" id="1_8hhy0"]
 [ext_resource type="Texture2D" uid="uid://bablcilv648w" path="res://Assests/Saturn.png" id="1_dusy6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://deps2orwbr7mj" path="res://Assests/DesertTiles.png" id="2_xdtbt"]
 [ext_resource type="PackedScene" uid="uid://cfeieahkfibmb" path="res://Jeff.tscn" id="4_dxepn"]
 [ext_resource type="PackedScene" uid="uid://plw8a6122553" path="res://white_alien.tscn" id="5_2ho08"]
+[ext_resource type="Texture2D" uid="uid://b3ei3o3g2q1sy" path="res://Assests/JohnNasa.png" id="6_e020q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_034yj"]
 texture = ExtResource("2_xdtbt")
@@ -78,6 +79,19 @@ layer_0/tile_data = PackedInt32Array(524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 5
 position = Vector2(4176, -1256)
 
 [node name="AnimatedSprite2D" parent="Jeff" index="0"]
+texture = ExtResource("6_e020q")
+flip_h = true
+
+[node name="NPC-text" parent="Jeff" index="2"]
+offset_top = -472.0
+text = "[center]Did you know our solar system holds around 290 moons?
+Despite this, Titan is the only planet with a strong nitrogen atmosphere similar to Earth's."
+
+[node name="John" parent="." instance=ExtResource("4_dxepn")]
+position = Vector2(928, 592)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" parent="John" index="0"]
 flip_h = true
 
 [node name="Alien" parent="." instance=ExtResource("5_2ho08")]
@@ -86,3 +100,5 @@ position = Vector2(11416, -1520)
 [connection signal="body_entered" from="Alien" to="." method="_on_alien_body_entered"]
 
 [editable path="Jeff"]
+[editable path="John"]
+[editable path="Alien"]

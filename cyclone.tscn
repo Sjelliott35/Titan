@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce8qqa6qc05gq"]
+
+[ext_resource type="Script" path="res://Scripts/Cyclone.gd" id="1_uk34h"]
+[ext_resource type="Texture2D" uid="uid://c8m2yik6q4e4i" path="res://Assests/Cyclone1.png" id="2_gaiwb"]
+[ext_resource type="Texture2D" uid="uid://dxprkwxnd3tsd" path="res://Assests/Cyclone2.png" id="3_qanda"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_numse"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gaiwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qanda")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Cyclone" type="Area2D"]
+script = ExtResource("1_uk34h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_numse")
+frame_progress = 0.818364
+
+[node name="CollisonPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-72, -144, 0, 144, 72, -144)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
