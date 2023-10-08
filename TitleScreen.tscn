@@ -46,19 +46,11 @@ size_flags_horizontal = 3
 theme = ExtResource("3_rp022")
 text = "START GAME"
 
-[node name="Settings" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="ExitButton" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("3_rp022")
-text = "SETTINGS"
-
-[node name="ExitButton" type="Button" parent="."]
-offset_left = 1127.0
-offset_top = 12.0
-offset_right = 1269.0
-offset_bottom = 69.0
 theme = ExtResource("3_rp022")
 text = "EXIT"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="ExitButton" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_exit_pressed"]
