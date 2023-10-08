@@ -1,0 +1,281 @@
+[gd_scene load_steps=19 format=3 uid="uid://cg3h4ekldne67"]
+
+[ext_resource type="Script" path="res://Scripts/end_screen.gd" id="1_5uv3j"]
+[ext_resource type="Texture2D" uid="uid://de4ofovqu8eiu" path="res://Assests/Player2.png" id="1_dmp4y"]
+[ext_resource type="Texture2D" uid="uid://c8ri7hqsr4u8t" path="res://Assests/Player1.png" id="2_iiudl"]
+[ext_resource type="Texture2D" uid="uid://cbdohcd4evtph" path="res://Assests/Shipanims1.png" id="2_o8l5j"]
+[ext_resource type="Theme" uid="uid://c02j7ocec2408" path="res://npc_text.tres" id="2_pjgxk"]
+[ext_resource type="Texture2D" uid="uid://lq6aq87014vv" path="res://Assests/Shipanims2.png" id="3_5kbq3"]
+[ext_resource type="Texture2D" uid="uid://ddcg5eou6s6jb" path="res://Assests/Player3.png" id="3_ts7hs"]
+[ext_resource type="Texture2D" uid="uid://dokw5pm6vxh2j" path="res://Assests/Shipanims3.png" id="4_2i2wa"]
+[ext_resource type="Texture2D" uid="uid://dh54a0mxg42ee" path="res://Assests/Shipanims4.png" id="5_75ged"]
+[ext_resource type="Texture2D" uid="uid://sirk573j5dhv" path="res://Assests/Shipanims5.png" id="6_4y70d"]
+[ext_resource type="Texture2D" uid="uid://h57y2preu6s2" path="res://Assests/Shipanims6.png" id="7_arnhv"]
+[ext_resource type="Texture2D" uid="uid://gxrmdxjwn66q" path="res://Assests/Shipanims7.png" id="8_51nso"]
+[ext_resource type="Script" path="res://Scripts/Spaceship.gd" id="9_tgh0w"]
+
+[sub_resource type="Animation" id="Animation_4nrmk"]
+resource_name = "end_movie"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(48, 624), Vector2(696, 616)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Spaceship:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(944, 368), Vector2(944, -352)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 360), Vector2(640, -360)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Quote:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(6.5, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("END:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(10, 11.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ex1b3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(696, 616)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Spaceship:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(944, -352)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 360)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Quote:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("END:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wsp32"]
+_data = {
+"RESET": SubResource("Animation_ex1b3"),
+"end_movie": SubResource("Animation_4nrmk")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68nwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dmp4y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iiudl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ts7hs")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_duwmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8l5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5kbq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2i2wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_75ged")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4y70d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_arnhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_51nso")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="EndScreen" type="Node2D"]
+script = ExtResource("1_5uv3j")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_top = -720.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0.137255, 0.129412, 1)
+
+[node name="Floor" type="ColorRect" parent="."]
+offset_top = 640.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="Quote" type="RichTextLabel" parent="."]
+offset_left = 64.0
+offset_top = -640.0
+offset_right = 704.0
+offset_bottom = -384.0
+theme = ExtResource("2_pjgxk")
+theme_override_colors/default_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+text = "Exploration really is the essence of the human spirit, and to pause, to falter, to turn our back on the quest for knowledge, is to perish.”
+― Frank Borman, Nasa Astronaut"
+
+[node name="END" type="RichTextLabel" parent="."]
+offset_left = 64.0
+offset_top = -384.0
+offset_right = 656.0
+offset_bottom = -304.0
+theme = ExtResource("2_pjgxk")
+theme_override_colors/default_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+text = "THE END
+ESCAPE to return to main menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wsp32")
+}
+
+[node name="Player" type="AnimatedSprite2D" parent="."]
+position = Vector2(696, 616)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_68nwn")
+
+[node name="Spaceship" type="AnimatedSprite2D" parent="."]
+position = Vector2(944, -352)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_duwmc")
+frame_progress = 0.205325
+script = ExtResource("9_tgh0w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+position_smoothing_enabled = true

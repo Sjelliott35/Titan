@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://4gmjudtk5evg"]
+[gd_scene load_steps=13 format=3 uid="uid://4gmjudtk5evg"]
 
 [ext_resource type="Script" path="res://Scripts/tundra_level.gd" id="1_jhr20"]
+[ext_resource type="Texture2D" uid="uid://db52wk2gbe4pt" path="res://Assests/Tundraback.png" id="2_eyp64"]
 [ext_resource type="Texture2D" uid="uid://bablcilv648w" path="res://Assests/Saturn.png" id="2_h5vqn"]
 [ext_resource type="PackedScene" uid="uid://cd6r5xw5ymjc1" path="res://Player.tscn" id="3_sbt5s"]
 [ext_resource type="Texture2D" uid="uid://cyug3bosnnjcn" path="res://Assests/TundraTiles.png" id="4_tomrc"]
@@ -59,7 +60,14 @@ offset_bottom = 712.0
 color = Color(0.607843, 1, 0.968627, 1)
 metadata/_edit_lock_ = true
 
+[node name="Tundraback" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.580392)
+position = Vector2(6572, -8364)
+scale = Vector2(103.812, 141.438)
+texture = ExtResource("2_eyp64")
+
 [node name="Saturn" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.25098)
 position = Vector2(3504, -3336)
 scale = Vector2(69.871, 69.871)
